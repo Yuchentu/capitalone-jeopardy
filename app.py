@@ -54,10 +54,13 @@ def index():
 			parsed = helpers.refine_difficulty(difficulty, parsed)
 		tot = []
 		for temp in parsed.values():
-			printable = helpers.create_printable(temp)
-			if printable == {}:
+			try:
+				printable = helpers.create_printable(temp)
+				if printable == {}:
+					continue
+				tot.append(printable)
+			except:
 				continue
-			tot.append(printable)
 		if start != '' or end != '':
 			tot = helpers.refine_daterange(start, end, tot)
 
