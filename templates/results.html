@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Result
+{% endblock %}
+
+{% block nav %}
+
+    <div class="page-container">
+
+            <div class="navbar navbar-inverse" role="navigation">
+                <div class="container">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="/">Return to Search</a>
+                    </div>
+<!--                     <div class = "order-3">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item"><a class="nav-link" href="/">Predict</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/logout">Log Out</a></li>
+                        </ul>
+                    </div> -->
+            </div>
+    </div>
+
+{% endblock %}
+{% block main %}
+
+{% for question in data %}
+    <p1> id: </p1> {{question['id']}}
+    <table class="table table-striped">
+        <thread>
+            <tr>
+                <th>Difficulty</th>
+                <th>Question</th>
+                <th>Answer</th>
+                <th>Category</th>
+                <th>Airdate</th>
+                <th>Invalid Count</th>
+            </tr>
+        </thread>
+        <tbody>
+            <tr>
+                <td>{{question["difficulty"]}}</td>
+                <td>{{question["question"]}}</td>
+                <td>{{question["answer"]}}</td>
+                <td>{{question["category"]}}</td>
+                <td>{{question["airdate"]}}</td>
+                <td>{{question["invalid_count"]}}</td>
+            </tr>
+        </tbody>
+    </table>
+{% endfor %}
+{% endblock %}

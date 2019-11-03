@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    No Results
+{% endblock %}
+
+
+{% block nav %}
+
+    <div class="page-container">
+
+            <div class="navbar navbar-inverse" role="navigation">
+                <div class="container">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="/">Question Search</a>
+                    </div>
+<!--                     <div class = "order-3">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item"><a class="nav-link" href="/bookmarks">Bookmarks</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/logout">Log Out</a></li>
+                        </ul>
+                    </div> -->
+            </div>
+    </div>
+
+{% endblock %}
+{% block main %}
+
+<h1> No results found for this query! </h1>
+
+<form action="/">
+    <button class="btn btn-primary" type="submit">Return to Search</button>
+</form>
+
+
+
+
+{% endblock %}
