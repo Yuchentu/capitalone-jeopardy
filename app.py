@@ -3,8 +3,6 @@ import datascripts.search_helpers as helpers
 import pickle
 from datetime import datetime
 
-
-
 TOT_QUESTIONS = 156809
 
 app = Flask(__name__)
