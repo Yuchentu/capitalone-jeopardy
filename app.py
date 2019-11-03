@@ -40,6 +40,10 @@ def index():
 		print(end)
 
 		parsed = pickle.load(open( "datascripts/file.pkl", "rb" ))
+		for x,y in parsed.items():
+			print(x)
+			print(y)
+			break
 
 
 		if symbol != '':
