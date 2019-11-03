@@ -17,7 +17,7 @@ while temp != []:
     temp = resp.json()
     tot += temp
     print(len(tot))
-    if len(tot) == 145000:
+    if len(tot) == 50000:
     	break
     # if len(tot) == 10000:
     # 	break
